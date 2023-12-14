@@ -45,6 +45,7 @@ jobs:
             fi
             if [ "$CURRENT_DOCKERFILE_SHA256" != "$DOCKERFILE_SHA256" ]; then
               TAG=${d%?}
+              echo "Building $TAG"
               docker build -t geesedream/torch-cuda:$TAG -f Dockerfile .
               docker push geesedream/torch-cuda:$TAG
               echo $CURRENT_DOCKERFILE_SHA256 > Dockerfile.sha256
