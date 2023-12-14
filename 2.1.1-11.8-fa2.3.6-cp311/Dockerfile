@@ -6,5 +6,5 @@ RUN git clone -b v2.3.6 https://github.com/Dao-AILab/flash-attention.git \
     && cd flash-attention \
     && pip --no-cache-dir install . \
     && pip --no-cache-dir install csrc/layer_norm \
-    && cd.. \
+    && cd .. \
     && rm -rf flash-attention
